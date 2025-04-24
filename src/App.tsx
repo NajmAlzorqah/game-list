@@ -23,7 +23,10 @@ function App() {
         paddingX={5}
         display={{ base: "none", lg: "block" }} // ✅ Responsive visibility
       >
-        <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+        <GenreList
+          selectedGenre={selectedGenre}
+          onSelectGenre={(genre) => setSelectedGenre(genre)}
+        />
       </GridItem>
 
       <GridItem area="main">
