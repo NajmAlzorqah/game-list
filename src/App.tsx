@@ -1,27 +1,30 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 
 function App() {
   return (
-    <>
-      <Grid
-        templateAreas={{
-          base: `"nav" "main"`,
-          lg: `"nav nav" "aside main"`,
-        }}
+    <Grid
+      templateAreas={{
+        base: `"nav" "main"`,
+        lg: `"nav nav" "aside main"`,
+      }}
+      templateColumns={{ base: "1fr", lg: "200px 1fr" }}
+    >
+      <GridItem area="nav" bg="coral">
+        Nav
+      </GridItem>
+
+      <GridItem
+        area="aside"
+        bg="gold"
+        display={{ base: "none", lg: "block" }} // ✅ Responsive visibility
       >
-        <GridItem area={"nav"} bg={"coral"}>
-          Nav
-        </GridItem>
-        <Show above="lg">
-          <GridItem area="aside" bg="gold">
-            Aside
-          </GridItem>
-        </Show>
-        <GridItem area={"main"} bg={"blue"}>
-          main
-        </GridItem>
-      </Grid>
-    </>
+        Aside
+      </GridItem>
+
+      <GridItem area="main" bg="blue">
+        Main
+      </GridItem>
+    </Grid>
   );
 }
 
