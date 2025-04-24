@@ -18,7 +18,9 @@ function App() {
 
       <GridItem
         area="aside"
-        display={{ base: "none", lg: "block" }} // ✅ Responsive visibility
+        paddingX={5}
+        display={{ base: "none", lg: "block" }
+      } // ✅ Responsive visibility
       >
         <GenreList />
       </GridItem>
