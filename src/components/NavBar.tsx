@@ -1,5 +1,5 @@
 import { HStack, Image } from "@chakra-ui/react";
-import logo from "../assets/react.svg";
+import logo from "../assets/GameListLogo.png";
 import { ColorModeButton } from "./ui/color-mode";
 import SearchInput from "./SearchInput";
 
