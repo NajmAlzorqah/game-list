@@ -36,6 +36,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
                 objectFit="cover"
                 borderRadius={8}
                 src={getCroppedImageUrl(genre.image_background)}
+                alt={genre.name}
               />
               <Button
                 onClick={() => onSelectGenre(genre)}
