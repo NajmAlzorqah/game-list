@@ -14,6 +14,7 @@ const SearchInput = ({ onSearch }: Props) => {
         event.preventDefault();
         if (ref.current) onSearch(ref.current.value);
       }}
+      name="search-input"
     >
       <InputGroup startElement={<BsSearch />}>
         <Input

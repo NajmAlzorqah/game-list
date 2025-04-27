@@ -11,6 +11,7 @@ const axiosInstance = axios.create({
   params: {
     key: "bff82b3abb844c438672ad32789807b7",
   },
+  withCredentials: false, // for disabling api cookies
 });
 
 class APIClient<T> {
