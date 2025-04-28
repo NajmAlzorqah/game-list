@@ -17,7 +17,7 @@ const HomePage = () => {
       <GridItem
         area="aside"
         paddingX={5}
-        display={{ base: "none", lg: "block" }} 
+        display={{ base: "none", lg: "block" }}
       >
         <GenreList />
       </GridItem>
@@ -25,7 +25,7 @@ const HomePage = () => {
       <GridItem area="main">
         <Box paddingLeft={10}>
           <GameHeading />
-          <Flex gap={5}>
+          <Flex gap={5} flexWrap="wrap">
             <PlatformSelector />
             <SortSelector />
           </Flex>
