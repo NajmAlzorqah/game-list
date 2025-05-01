@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# 🎮 Game List – A Modern Video Game Discovery Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** _[Game List](https://najm-gamelist-19.vercel.app/)_    
+**Tech Stack:** React 19, Zustand, TanStack Query, TypeScript, Vite, Chakra UI, RAWG Video Games Database API
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Description
 
-## Expanding the ESLint configuration
+**Game List** is a high-performance, responsive web application built as a functional clone of [RAWG.io](https://rawg.io/), the largest open video game database. This project showcases the ability to work with real-world APIs and implement modern frontend best practices to build a scalable and optimized user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🚀 Key Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **API Integration:**  
+  Utilizes the RAWG API (free plan) to access data on over 350,000 games across 50+ platforms. Displays rich metadata including genres, tags, ratings, platforms, and store links.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Efficient Data Fetching & Caching:**  
+  Uses `@tanstack/react-query` to handle asynchronous data fetching, intelligent caching, background updates, and pagination — minimizing API calls and improving performance.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- **State Management:**  
+  Uses `zustand` for lightweight and scalable global state handling.
+
+- **Performance Optimizations:**  
+  Built with Vite for fast development and highly optimized production builds. Efficient caching reduces redundant data fetching and enhances speed.
+
+- **UI/UX Design:**  
+  Built using `Chakra UI` and `framer-motion` to deliver a polished, accessible, and animated user interface. Includes theme switching with `next-themes`.
+
+- **Infinite Scrolling:**  
+  Implements seamless infinite scroll for game listings using `react-infinite-scroll-component`.
+
+- **Routing:**  
+  Managed with `react-router-dom` (v6) for SPA navigation.
+
+---
+
+## 🛠 Installation
+
+```bash
+git clone https://github.com/NajmAlzorqah/game-list.git
+cd game-list
+bun install
+bun run dev
 ```
