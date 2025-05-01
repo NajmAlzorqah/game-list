@@ -1,6 +1,6 @@
 # 🎮 Game List – A Modern Video Game Discovery Web App
 
-**Live Demo:** _[Game List](https://najm-gamelist-19.vercel.app/)_    
+**Live Demo:** _[Game List](https://najm-gamelist-19.vercel.app/)_  
 **Tech Stack:** React 19, Zustand, TanStack Query, TypeScript, Vite, Chakra UI, RAWG Video Games Database API
 
 ---
@@ -44,3 +44,9 @@ cd game-list
 bun install
 bun run dev
 ```
+
+## 📷 Screenshots
+
+<img src="./src/assets/Home-page-dark.png" alt="Game List Homepage Dark" width="100%">
+<img src="./src/assets/Home-page-light.png" alt="Game List Homepage Light" width="100%">
+<img src="./src/assets/Game-details.png" alt="Game Details View" width="100%">
